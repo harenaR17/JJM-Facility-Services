@@ -1,20 +1,20 @@
 import Image from 'next/image'
-import { Mail, Phone } from 'lucide-react'
+import { Mail, Phone, MapPin } from 'lucide-react'
 
-const LOGO_URL = 'https://niy5kmpsgn.ufs.sh/f/Ae47L81N5E0P4Z5uhdWezwyf2bjKd9Lun5HDkCxgtETcelQJ'
+const LOGO_URL = 'https://n51uo9rgjr.ufs.sh/f/xhCD5dlGNvuUlWc0SjQgsYJlfkie2dTVHAUXw9rBNC1Iq6G5'
 
-const serviceLinks = [
-  { label: 'Entretien de locaux', href: '#services' },
-  { label: 'Vitrerie professionnelle', href: '#services' },
-  { label: 'Remise en état', href: '#services' },
-  { label: 'Interventions ponctuelles', href: '#services' },
+const quickLinks = [
+  { label: 'Services', href: '#services' },
+  { label: 'About', href: '#about' },
+  { label: 'Testimonials', href: '#avis' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export function Footer() {
   return (
     <footer
       className="bg-[var(--marine-dark)] text-white/80"
-      aria-label="Pied de page"
+      aria-label="Footer"
     >
       {/* Gradient top accent bar */}
       <div
@@ -31,32 +31,31 @@ export function Footer() {
             <div className="flex items-center gap-2">
               <Image
                 src={LOGO_URL}
-                alt="Service Pro'Preté logo"
+                alt="JJM Facility Services logo"
                 width={36}
                 height={36}
                 className="rounded-full object-cover flex-shrink-0"
                 unoptimized
               />
               <p className="font-serif text-xl text-white">
-                Service Pro&apos;Preté
+                JJM Facility Services
               </p>
             </div>
             <p className="text-sm leading-relaxed text-white/60">
-              Nettoyage professionnel pour entreprises et commerces en
-              Loire-Atlantique.
+              Affordable and dependable commercial cleaning for the Cleveland area.
             </p>
             <p className="text-xs text-white/40 mt-2">
-              Loireauxence (Varades), 44370
+              Middleburg Heights, OH 44130
             </p>
           </div>
 
-          {/* Services */}
+          {/* Quick Links */}
           <div className="flex flex-col gap-4">
             <h3 className="text-white font-semibold text-sm font-sans tracking-wide uppercase">
-              Services
+              Quick Links
             </h3>
             <ul className="flex flex-col gap-2">
-              {serviceLinks.map(({ label, href }) => (
+              {quickLinks.map(({ label, href }) => (
                 <li key={label}>
                   <a
                     href={href}
@@ -77,29 +76,33 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               <li>
                 <a
-                  href="mailto:serviceproprete44@gmail.com"
+                  href="tel:+14405321475"
                   className="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
                 >
-                  <Mail className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
-                  serviceproprete44@gmail.com
+                  <Phone className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+                  (440) 532-1475
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+33695909891"
+                  href="mailto:info@jjmfacilityservices.com"
                   className="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
                 >
-                  <Phone className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
-                  06 95 90 98 91
+                  <Mail className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+                  info@jjmfacilityservices.com
                 </a>
+              </li>
+              <li className="flex items-start gap-2 text-sm text-white/70">
+                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                <span>7017 Pearl Rd, Ste 1E<br />Middleburg Heights, OH 44130</span>
               </li>
             </ul>
             <div className="mt-2">
               <a
-                href="mailto:serviceproprete44@gmail.com"
-                className="inline-flex items-center rounded-lg bg-[var(--marine)] hover:bg-[var(--lavande)] px-4 py-2 text-sm font-semibold text-white transition-colors"
+                href="tel:+14405321475"
+                className="inline-flex items-center rounded-lg bg-[var(--lavande)] hover:bg-[var(--marine)] px-4 py-2 text-sm font-semibold text-white transition-colors"
               >
-                Devis gratuit →
+                Get a Free Quote →
               </a>
             </div>
           </div>
@@ -107,8 +110,8 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
-          <p>© 2025 Service Pro&apos;Preté — Tous droits réservés</p>
-          <p>Loireauxence · Varades · Ancenis · Loire-Atlantique</p>
+          <p>© 2026 JJM Facility Services. All rights reserved.</p>
+          <p>Middleburg Heights · Cleveland · Ohio</p>
         </div>
       </div>
     </footer>

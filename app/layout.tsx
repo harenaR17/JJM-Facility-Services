@@ -16,19 +16,19 @@ const dmSerifDisplay = DM_Serif_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Service Pro'Preté | Nettoyage professionnel — Loireauxence, Loire-Atlantique",
+  title: 'JJM Facility Services | Commercial Cleaning — Cleveland & Middleburg Heights, OH',
   description:
-    "Entreprise de nettoyage professionnel basée à Loireauxence (44). Entretien de locaux, vitrerie, remise en état après travaux. Devis gratuit sous 24h.",
+    'Family-owned commercial cleaning company serving Cleveland and Middleburg Heights, OH since 2015. Janitorial services, carpet & floor care, window washing, post-construction cleanup. Free quote.',
   metadataBase: new URL('https://vercel.app'),
   icons: {
-    icon: 'https://niy5kmpsgn.ufs.sh/f/Ae47L81N5E0P4Z5uhdWezwyf2bjKd9Lun5HDkCxgtETcelQJ',
-    apple: 'https://niy5kmpsgn.ufs.sh/f/Ae47L81N5E0P4Z5uhdWezwyf2bjKd9Lun5HDkCxgtETcelQJ',
+    icon: 'https://n51uo9rgjr.ufs.sh/f/xhCD5dlGNvuUlWc0SjQgsYJlfkie2dTVHAUXw9rBNC1Iq6G5',
+    apple: 'https://n51uo9rgjr.ufs.sh/f/xhCD5dlGNvuUlWc0SjQgsYJlfkie2dTVHAUXw9rBNC1Iq6G5',
   },
   openGraph: {
-    title: "Service Pro'Preté | Nettoyage professionnel",
+    title: 'JJM Facility Services | Commercial Cleaning Cleveland, OH',
     description:
-      "Nettoyage professionnel pour entreprises et commerces en Loire-Atlantique — entretien régulier, vitrerie, remise en état après travaux.",
-    locale: 'fr_FR',
+      'Reliable commercial cleaning for offices, medical facilities, schools, and industrial spaces across the Cleveland area — janitorial, carpet care, window washing.',
+    locale: 'en_US',
     type: 'website',
   },
 }
@@ -36,26 +36,28 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: "Service Pro'Preté",
+  name: 'JJM Facility Services',
   description:
-    'Entreprise de nettoyage professionnel en Loire-Atlantique. Entretien de locaux, vitrerie, remise en état.',
-  telephone: '+33695909891',
-  email: 'serviceproprete44@gmail.com',
+    'Family-owned commercial cleaning company serving Cleveland and Middleburg Heights, OH. Janitorial services, carpet & floor care, window washing, post-construction cleanup.',
+  telephone: '+14405321475',
+  email: 'info@jjmfacilityservices.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Loireauxence',
-    addressLocality: 'Loireauxence',
-    postalCode: '44370',
-    addressCountry: 'FR',
+    streetAddress: '7017 Pearl Rd, Ste 1E',
+    addressLocality: 'Middleburg Heights',
+    addressRegion: 'OH',
+    postalCode: '44130',
+    addressCountry: 'US',
   },
   areaServed: [
-    'Loireauxence',
-    'Varades',
-    'Ancenis',
-    'Saint-Florent-le-Vieil',
-    'Loire-Atlantique',
+    'Cleveland',
+    'Middleburg Heights',
+    'Berea',
+    'Strongsville',
+    'Ohio',
   ],
-  priceRange: '€€',
+  openingHours: 'Mo-Fr 08:00-17:00',
+  priceRange: '$$',
 }
 
 export default function RootLayout({
@@ -64,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="fr" className={`${dmSans.variable} ${dmSerifDisplay.variable}`}>
+    <html lang="en" className={`${dmSans.variable} ${dmSerifDisplay.variable}`}>
       <head>
         <script
           type="application/ld+json"

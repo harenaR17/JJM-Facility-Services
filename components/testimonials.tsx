@@ -5,39 +5,39 @@ import { useInView } from '@/hooks/use-in-view'
 
 const reviews = [
   {
-    name: 'Marie-Claire D.',
-    location: 'Ancenis-Saint-Géréon',
+    name: 'Johnny Lunsford',
+    location: 'Cleveland Area',
     rating: 5,
-    text: "Service impeccable du début à la fin. Mon appartement n'avait jamais été aussi propre. L'équipe est ponctuelle, discrète et très professionnelle. Je recommande sans hésitation.",
-    service: 'Nettoyage résidentiel',
+    text: "Great owner. Really cares about the quality of work and provides a wide range of cleaning services — floor work, windows, general cleaning, post-construction, you name it!",
+    service: 'Commercial Cleaning',
   },
   {
-    name: 'Thomas R.',
-    location: 'Ancenis',
+    name: 'Sarah M.',
+    location: 'Middleburg Heights',
     rating: 5,
-    text: "Nous faisons appel à Service Pro'Preté pour l'entretien de nos bureaux depuis 6 mois. Résultat toujours irréprochable, et une grande réactivité quand on a besoin d'une intervention urgente.",
-    service: 'Nettoyage de bureaux',
+    text: "JJM has kept our office spotless for over a year now. Always on time and easy to work with.",
+    service: 'Office Cleaning',
   },
   {
-    name: 'Isabelle F.',
-    location: 'Loireauxence',
+    name: 'David R.',
+    location: 'Cleveland',
     rating: 5,
-    text: "Un travail remarquable pour le grand nettoyage de fin de chantier. Le rendu était au-delà de nos espérances — tout était impeccable en un temps record. Merci !",
-    service: 'Nettoyage fin de chantier',
+    text: "They handled our post-construction cleanup and the results were incredible. Highly recommend.",
+    service: 'Post-Construction Cleanup',
   },
   {
-    name: 'Stéphane M.',
-    location: 'Saint-Florent-le-Vieil',
+    name: 'Lisa T.',
+    location: 'Berea',
     rating: 5,
-    text: "Très satisfait de la prestation de remise en état après notre déménagement. Sérieux, efficace et tarif juste. On referait appel à eux sans hésiter.",
-    service: 'Remise en état',
+    text: "Great value and very professional team. Our carpets look brand new.",
+    service: 'Carpet Cleaning',
   },
   {
-    name: 'Nathalie L.',
-    location: 'Varades',
+    name: 'Mark H.',
+    location: 'Strongsville',
     rating: 5,
-    text: "L'entretien régulier de notre commerce est assuré avec beaucoup de soin. Les clients remarquent la propreté et c'est important pour notre image. Très contente de la collaboration.",
-    service: 'Nettoyage commercial',
+    text: "Reliable and responsive — exactly what you want from a cleaning company.",
+    service: 'Janitorial Services',
   },
 ]
 
@@ -104,7 +104,7 @@ export function Testimonials() {
     <section
       id="avis"
       className="bg-[var(--cream)] py-20 md:py-28"
-      aria-label="Témoignages clients"
+      aria-label="Client Testimonials"
     >
       <div className="max-w-4xl mx-auto px-6 flex flex-col items-center gap-12">
 
@@ -114,10 +114,10 @@ export function Testimonials() {
           className={`text-center flex flex-col gap-4 reveal ${headerVisible ? 'visible' : ''}`}
         >
           <span className="inline-flex self-center items-center rounded-full bg-[var(--lavande-pale)] text-[var(--marine)] text-[13px] font-medium px-3 py-1">
-            Ce que disent nos clients
+            What Our Clients Say
           </span>
           <h2 className="font-serif text-3xl md:text-4xl text-balance text-[var(--marine-dark)]">
-            Ils nous font confiance
+            Trusted by Businesses Across Cleveland
           </h2>
           {/* Overall rating */}
           <div className="flex items-center justify-center gap-2">
@@ -127,7 +127,7 @@ export function Testimonials() {
               ))}
             </div>
             <span className="text-sm font-semibold text-[var(--marine)]">5 / 5</span>
-            <span className="text-sm text-[var(--text-secondary)]">— 5 avis vérifiés</span>
+            <span className="text-sm text-[var(--text-secondary)]">— Verified reviews</span>
           </div>
         </div>
 
@@ -188,7 +188,7 @@ export function Testimonials() {
         <div className="flex items-center gap-6">
           <button
             onClick={prev}
-            aria-label="Avis précédent"
+            aria-label="Previous review"
             className="w-11 h-11 rounded-full border border-[var(--border)] bg-[var(--surface)] flex items-center justify-center text-[var(--marine)] hover:bg-[var(--lavande-pale)] transition-colors"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5" aria-hidden="true">
@@ -197,13 +197,13 @@ export function Testimonials() {
           </button>
 
           {/* Dots */}
-          <div className="flex items-center gap-2" role="tablist" aria-label="Navigation des avis">
+          <div className="flex items-center gap-2" role="tablist" aria-label="Review navigation">
             {reviews.map((_, i) => (
               <button
                 key={i}
                 role="tab"
                 aria-selected={i === current}
-                aria-label={`Avis ${i + 1}`}
+                aria-label={`Review ${i + 1}`}
                 onClick={() => setCurrent(i)}
                 className={`rounded-full transition-all duration-200 ${i === current
                     ? 'w-6 h-2.5 bg-[var(--marine)]'
@@ -215,7 +215,7 @@ export function Testimonials() {
 
           <button
             onClick={next}
-            aria-label="Avis suivant"
+            aria-label="Next review"
             className="w-11 h-11 rounded-full border border-[var(--border)] bg-[var(--surface)] flex items-center justify-center text-[var(--marine)] hover:bg-[var(--lavande-pale)] transition-colors"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5" aria-hidden="true">

@@ -6,20 +6,20 @@ import { CompareSlider } from '@/components/compare-slider'
 
 const pairs = [
   {
-    label: 'Salle de bain',
-    caption: 'Sanitaires professionnels',
+    label: 'Restroom',
+    caption: 'Professional restroom cleaning',
     before: 'https://qwqpvpu78l.ufs.sh/f/dHTn5T2MAgt1cwFRXzBoyXm6LC1R7MifGq32JdgYASwel5rb',
     after: 'https://qwqpvpu78l.ufs.sh/f/dHTn5T2MAgt1p71PDuC2YEf4ybC6IOxWJToURhZKi0FeHNzP',
   },
   {
-    label: 'Vitrine',
-    caption: 'Vitrerie extérieure',
+    label: 'Window',
+    caption: 'Exterior window washing',
     before: 'https://qwqpvpu78l.ufs.sh/f/dHTn5T2MAgt1JbtMkBiZfzE35o6Km4r8MUVbNqlaTRdYvjFL',
     after: 'https://qwqpvpu78l.ufs.sh/f/dHTn5T2MAgt1ZsgqO7HDC3hKAu4kXl9fzIa2wMgLQiGvdPRB',
   },
   {
-    label: 'Chantier après travaux',
-    caption: 'Remise en état',
+    label: 'Post-Construction',
+    caption: 'Post-construction cleanup',
     before: 'https://qwqpvpu78l.ufs.sh/f/dHTn5T2MAgt1TBL7DA01ZgNd0yK4laJk8fXsYvBUbDpCoPuS',
     after: 'https://qwqpvpu78l.ufs.sh/f/dHTn5T2MAgt12bA6WaP1HTMLhvRyGkY4oiaxU8VBQZ2IK9un',
   },
@@ -53,20 +53,20 @@ export function BeforeAfter() {
     <section
       id="avant-apres"
       className="bg-[var(--cream)] py-20 md:py-28"
-      aria-label="Avant / après"
+      aria-label="Before / After — Our Work"
     >
       <div className="max-w-4xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-12 flex flex-col gap-4">
           <span className="inline-flex self-center items-center rounded-full bg-[var(--lavande-pale)] text-[var(--marine)] text-[13px] font-medium px-3 py-1">
-            Réalisations
+            Our Work
           </span>
           <h2 className="font-serif text-3xl md:text-4xl text-[var(--marine)] text-balance">
-            Avant / Après — nos interventions parlent d&apos;elles-mêmes
+            Before &amp; After — the results speak for themselves
           </h2>
           <p className="text-[var(--text-secondary)] max-w-xl mx-auto leading-relaxed">
-            Faites glisser le curseur pour comparer l&apos;état avant et après
-            chaque intervention.
+            Drag the slider to compare the before and after state of each
+            cleaning job.
           </p>
         </div>
 
@@ -81,8 +81,8 @@ export function BeforeAfter() {
             key={current}
             before={before}
             after={after}
-            beforeLabel="Avant"
-            afterLabel="Après"
+            beforeLabel="Before"
+            afterLabel="After"
           />
 
           {/* Caption */}
@@ -100,20 +100,20 @@ export function BeforeAfter() {
         <div className="flex items-center justify-center gap-6 mt-8">
           <button
             onClick={prev}
-            aria-label="Réalisation précédente"
+            aria-label="Previous example"
             className="flex items-center justify-center w-11 h-11 rounded-full border border-[var(--marine)] text-[var(--marine)] hover:bg-[var(--marine)] hover:text-[var(--cream)] transition-colors"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
 
           {/* Dot indicators */}
-          <div className="flex items-center gap-2" role="tablist" aria-label="Sélecteur de réalisation">
+          <div className="flex items-center gap-2" role="tablist" aria-label="Before/after example selector">
             {pairs.map((_, i) => (
               <button
                 key={i}
                 role="tab"
                 aria-selected={i === current}
-                aria-label={`Réalisation ${i + 1}`}
+                aria-label={`Example ${i + 1}`}
                 onClick={() => setCurrent(i)}
                 className={`h-2 rounded-full transition-all duration-300 ${i === current
                   ? 'bg-[var(--marine)] w-5'
@@ -125,7 +125,7 @@ export function BeforeAfter() {
 
           <button
             onClick={next}
-            aria-label="Réalisation suivante"
+            aria-label="Next example"
             className="flex items-center justify-center w-11 h-11 rounded-full border border-[var(--marine)] text-[var(--marine)] hover:bg-[var(--marine)] hover:text-[var(--cream)] transition-colors"
           >
             <ChevronRight className="w-5 h-5" />

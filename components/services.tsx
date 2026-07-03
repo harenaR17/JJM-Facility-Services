@@ -1,6 +1,6 @@
 'use client'
 
-import { Building2, Sparkles, Wrench, Clock, Phone, ArrowRight } from 'lucide-react'
+import { Building2, Sparkles, Wrench, Clock, ArrowRight } from 'lucide-react'
 import { useInView } from '@/hooks/use-in-view'
 import { QuoteModal } from '@/components/quote-modal'
 import { Button } from '@/components/ui/button'
@@ -8,27 +8,27 @@ import { Button } from '@/components/ui/button'
 const services = [
   {
     icon: Building2,
-    title: 'Entretien de locaux',
+    title: 'Janitorial Services',
     description:
-      'Bureaux, commerces, cabinets — entretien régulier selon vos fréquences.',
+      'Routine cleaning for offices, medical facilities, schools, and industrial spaces on your schedule.',
   },
   {
     icon: Sparkles,
-    title: 'Vitrerie professionnelle',
+    title: 'Carpet & Floor Care',
     description:
-      'Nettoyage de vitres intérieures et extérieures. Résultat garanti sans traces.',
+      'Carpet cleaning, floor stripping & waxing, and hard floor care — restored to like-new condition.',
   },
   {
     icon: Wrench,
-    title: 'Remise en état',
+    title: 'Window Washing',
     description:
-      'Après travaux, déménagement ou fin de bail. Décrassage complet.',
+      'Interior and exterior window cleaning for a streak-free, professional finish.',
   },
   {
     icon: Clock,
-    title: 'Interventions ponctuelles',
+    title: 'Post-Construction Cleanup',
     description:
-      "Besoin urgent ou ponctuel ? J'interviens rapidement sur votre secteur.",
+      'Complete cleanup after construction or renovation, so your space is ready for use.',
   },
 ]
 
@@ -42,7 +42,7 @@ export function Services() {
     <section
       id="services"
       className="bg-[var(--surface)] py-20 md:py-28"
-      aria-label="Nos services"
+      aria-label="Our Services"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Section heading */}
@@ -51,14 +51,13 @@ export function Services() {
           className={`text-center mb-14 flex flex-col gap-4 reveal ${headerVisible ? 'visible' : ''}`}
         >
           <span className="inline-flex self-center items-center rounded-full bg-[var(--lavande-pale)] text-[var(--marine)] text-[13px] font-medium px-3 py-1">
-            Prestations
+            Our Services
           </span>
           <h2 className="font-serif text-3xl md:text-4xl text-[var(--marine)] text-balance">
-            Ce que je fais pour vous
+            What We Do for Your Business
           </h2>
           <p className="text-[var(--text-secondary)] max-w-xl mx-auto leading-relaxed">
-            Des prestations sur-mesure adaptées à vos locaux, vos contraintes
-            et vos horaires.
+            Tailored commercial cleaning solutions built around your facility, your schedule, and your budget.
           </p>
         </div>
 
@@ -97,20 +96,19 @@ export function Services() {
         </div>
         <div className="mt-20 text-center">
           <p className="text-lg text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto">
-            Besoin d&apos;une intervention rapide ou d&apos;un entretien régulier ? 
-            Nous vous accompagnons pour maintenir vos locaux impeccables.
+            Need a one-time deep clean or an ongoing maintenance program? We&apos;ve got you covered.
           </p>
           <QuoteModal>
             <Button
               size="lg"
               className="group h-14 px-10 rounded-full bg-[var(--marine)] hover:bg-[var(--marine-dark)] text-white text-lg font-semibold shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
-              <span>Demander un devis gratuit</span>
+              <span>Request a Free Quote</span>
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
           </QuoteModal>
           <p className="mt-6 text-sm text-[var(--text-secondary)]/70 italic">
-            Réponse sous 24h — Devis gratuit et sans engagement
+            Fast response — Free, no-obligation quote
           </p>
         </div>
       </div>

@@ -3,18 +3,18 @@ import { Briefcase, CalendarDays, BadgeCheck } from 'lucide-react'
 const items = [
   {
     icon: Briefcase,
-    title: 'Matériel pro fourni',
-    subtitle: 'À chaque intervention',
+    title: 'Family-Owned Since 2015',
+    subtitle: 'Trusted local expertise',
   },
   {
     icon: CalendarDays,
-    title: 'Horaires adaptés',
-    subtitle: 'Selon vos contraintes',
+    title: 'Flexible Scheduling',
+    subtitle: 'Daily, weekly & emergency service',
   },
   {
     icon: BadgeCheck,
-    title: 'Devis gratuit',
-    subtitle: 'Réponse sous 24h',
+    title: 'Lowest Price Guarantee',
+    subtitle: 'Quality you can depend on',
   },
 ]
 

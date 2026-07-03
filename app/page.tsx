@@ -22,7 +22,7 @@ export default function Home() {
         <VideoSection />
         <Services />
         <BeforeAfter />
-        <DemoVideoBanner />
+        {/* <DemoVideoBanner /> */}{/* Disabled — monobrosse section */}
         <WhyUs />
         <Testimonials />
         <About />

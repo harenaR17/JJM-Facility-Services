@@ -18,11 +18,11 @@ export function QuoteModal({ children }: { children: React.ReactNode }) {
   }
 
   const mailtoHref = () => {
-    const subject = encodeURIComponent('Demande de devis – Service Pro\'Preté')
+    const subject = encodeURIComponent('Free Quote Request – JJM Facility Services')
     const body = encodeURIComponent(
-      `Nom : ${form.name}\nTéléphone : ${form.phone}\n\n${form.message}`
+      `Name: ${form.name}\nPhone: ${form.phone}\n\n${form.message}`
     )
-    return `mailto:serviceproprete44@gmail.com?subject=${subject}&body=${body}`
+    return `mailto:info@jjmfacilityservices.com?subject=${subject}&body=${body}`
   }
 
   return (
@@ -33,21 +33,21 @@ export function QuoteModal({ children }: { children: React.ReactNode }) {
       <DialogContent className="!w-[90vw] md:!w-[500px] md:!max-w-[500px] overflow-hidden max-h-[90vh] flex flex-col p-8 bg-white" style={{ boxShadow: 'var(--shadow-card)' }}>
         <DialogHeader>
           <DialogTitle className="font-serif text-2xl md:text-3xl text-[var(--marine-dark)]">
-            Demander un devis gratuit
+            Request a Free Quote
           </DialogTitle>
         </DialogHeader>
 
         <div className="flex flex-col gap-5 mt-2 overflow-y-auto pr-2">
           <div className="flex flex-col gap-1.5">
             <label htmlFor="modal-name" className="text-sm font-medium text-[var(--text-body)]">
-              Nom complet <span className="text-red-500" aria-hidden="true">*</span>
+              Name <span className="text-red-500" aria-hidden="true">*</span>
             </label>
             <input
               id="modal-name"
               name="name"
               type="text"
               required
-              placeholder="Jean Dupont"
+              placeholder="John Smith"
               value={form.name}
               onChange={handleChange}
               className="w-full border border-[var(--lavande-pale)] rounded-lg px-4 py-3 text-sm text-[var(--text-body)] placeholder:text-[var(--text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--marine)] transition"
@@ -63,7 +63,7 @@ export function QuoteModal({ children }: { children: React.ReactNode }) {
               name="email"
               type="email"
               required
-              placeholder="jean.dupont@email.com"
+              placeholder="john@company.com"
               value={form.email}
               onChange={handleChange}
               className="w-full border border-[var(--lavande-pale)] rounded-lg px-4 py-3 text-sm text-[var(--text-body)] placeholder:text-[var(--text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--marine)] transition"
@@ -72,14 +72,14 @@ export function QuoteModal({ children }: { children: React.ReactNode }) {
 
           <div className="flex flex-col gap-1.5">
             <label htmlFor="modal-phone" className="text-sm font-medium text-[var(--text-body)]">
-              Téléphone <span className="text-red-500" aria-hidden="true">*</span>
+              Phone <span className="text-red-500" aria-hidden="true">*</span>
             </label>
             <input
               id="modal-phone"
               name="phone"
               type="tel"
               required
-              placeholder="06 12 34 56 78"
+              placeholder="(440) 555-0123"
               value={form.phone}
               onChange={handleChange}
               className="w-full border border-[var(--lavande-pale)] rounded-lg px-4 py-3 text-sm text-[var(--text-body)] placeholder:text-[var(--text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--marine)] transition"
@@ -94,7 +94,7 @@ export function QuoteModal({ children }: { children: React.ReactNode }) {
               id="modal-message"
               name="message"
               rows={4}
-              placeholder="Décrivez votre projet..."
+              placeholder="Tell us about your cleaning needs..."
               value={form.message}
               onChange={handleChange}
               className="w-full border border-[var(--lavande-pale)] rounded-lg px-4 py-3 text-sm text-[var(--text-body)] placeholder:text-[var(--text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--marine)] transition resize-none"
@@ -108,7 +108,7 @@ export function QuoteModal({ children }: { children: React.ReactNode }) {
             className="flex items-center justify-center gap-2 w-full py-4 rounded-xl font-semibold text-white bg-[var(--marine)] hover:bg-[var(--marine-dark)] transition-colors"
           >
             <Send className="w-4 h-4" aria-hidden="true" />
-            Envoyer ma demande
+            Send My Request
           </a>
         </div>
       </DialogContent>

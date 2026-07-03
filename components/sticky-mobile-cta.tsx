@@ -36,7 +36,7 @@ export function StickyMobileCta() {
           tabIndex={visible ? 0 : -1}
         >
           <Phone className="w-5 h-5" aria-hidden="true" />
-          Obtenir un devis
+          Get a Free Quote
         </button>
       </QuoteModal>
     </div>

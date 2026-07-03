@@ -4,11 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* ─── Service Pro'Preté Design Tokens ─── */
-  --marine:           #2B2E6E;
-  --marine-dark:      #1A1C4A;
-  --lavande:          #9B9FD4;
-  --lavande-pale:     #E8E8F5;
+  /* ─── JJM Facility Services Design Tokens ─── */
+  --marine:           #1A2B6B;
+  --marine-dark:      #0F1A45;
+  --lavande:          #C41E3A;
+  --lavande-pale:     #F5E1E4;
   --cream:            #F5F3EE;
   --surface:          #FFFFFF;
   --text-body:        #374151;
@@ -69,10 +69,10 @@
   --color-ring:               var(--ring);
 
   /* brand color utilities */
-  --color-marine:         #2B2E6E;
-  --color-marine-dark:    #1A1C4A;
-  --color-lavande:        #9B9FD4;
-  --color-lavande-pale:   #E8E8F5;
+  --color-marine:         #1A2B6B;
+  --color-marine-dark:    #0F1A45;
+  --color-lavande:        #C41E3A;
+  --color-lavande-pale:   #F5E1E4;
   --color-cream:          #F5F3EE;
   --color-surface:        #FFFFFF;
   --color-text-body:      #374151;
@@ -86,8 +86,8 @@
 
 /* ─── Elevation tokens ─── */
 :root {
-  --shadow-card:   0 2px 12px rgba(43, 46, 110, 0.07);
-  --shadow-lifted: 0 8px 32px rgba(43, 46, 110, 0.13);
+  --shadow-card:   0 2px 12px rgba(26, 43, 107, 0.07);
+  --shadow-lifted: 0 8px 32px rgba(26, 43, 107, 0.13);
 }
 
 /* ─── Scroll-reveal ─── */
