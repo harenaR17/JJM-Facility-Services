@@ -9,6 +9,7 @@ const serviceTypes = [
   'Quality',
   'Professional',
   'Affordable',
+  'Dependable',
 ]
 
 function SwirlPattern() {
